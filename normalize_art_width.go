@@ -13,14 +13,12 @@ func NormalizeArtWidth(rows []string) []string {
 
 	maxL := len(rows[0])
 
-
 	for _, value := range rows {
 		if len(value) > maxL {
 			maxL = len(value)
 		}
 	}
 
-	
 	for index, value := range rows {
 		padding := maxL - len(value)
 		result[index] = value + strings.Repeat(" ", padding)
@@ -28,5 +26,3 @@ func NormalizeArtWidth(rows []string) []string {
 
 	return result
 }
-
-
