@@ -4,6 +4,8 @@ import (
 	"unicode"
 )
 
+
+//1.
 func CountVisibleChars(str []string) int {
 	count := 0
 	for _, w := range str {
@@ -16,4 +18,18 @@ func CountVisibleChars(str []string) int {
 	}
 
 	return count
+}
+
+//2.
+func CountVisibleChar(str []string) int{
+	count := 0
+	for _, word := range str{
+		for _, ch := range word{
+			if ch != ' '{
+				count++
+			}
+		}
+	}
+	return count
+	
 }
